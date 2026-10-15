@@ -302,7 +302,7 @@ const QS_4 = [
  {s:'d1',ex:1,q:'진리표 A B → X: 00→1, 01→1, 10→1, 11→0. 가장 간단한 회로는?',ch:['NAND 하나','AND 하나','OR 하나','XOR 하나'],w:'X = (AB)̅. AND-OR로 쓰면 게이트가 훨씬 많아요.'},
  {s:'d1',q:'(X = 0 AND Y = 1)일 때만 1인 식은?',ch:['F = X̅Y','F = XY̅','F = X + Y','F = XY'],w:'0인 변수엔 bar, 1인 변수는 그대로.'},
  {s:'d1',ex:1,q:'F = X̅Y + XY̅ 와 같은 것은?',ch:['X ⊕ Y','X + Y','XY','(XY)̅'],w:'다르면 1 = XOR.'},
- {s:'d1',q:'A̅는 어떻게 읽을까?',ch:['A bar','A star','A dot','A sub'],w:"A' 와 같은 뜻. A hat이라고도 해요."},
+ {s:'d1',q:'A̅는 어떻게 읽을까?',ch:['A bar','A star','A dot','A sub'],w:"A' (A prime)와 같은 뜻."},
  {s:'d1',q:'진리표로 논리식을 만들 때 기준이 되는 줄은?',ch:['출력이 1인 줄','출력이 0인 줄','첫 번째 줄','마지막 줄'],w:'1인 줄마다 AND 항을 만들어 OR로 묶기.'},
 
  {s:'d2',ex:1,q:'곱의 합(SOP) 회로의 구성 순서는?',ch:['1단계 AND → 2단계 OR','1단계 OR → 2단계 AND','NOT만 사용','XOR → AND'],w:'And-Or 회로!'},
@@ -412,7 +412,6 @@ const QS_4 = [
  {s:'e8',ex:1,q:"abc + def 를 NAND만으로 쓰면?",ch:["((abc)' (def)')'","(abc + def)'","(abc)' + (def)'","abc · def"],w:'AND-OR → NAND-NAND.'},
  {s:'e8',q:'AND-OR 회로를 NAND 회로로 바꾸는 방법은?',ch:['AND 출력과 OR 입력에 NOT을 추가','모든 게이트 뒤에 NOT 하나','OR를 AND로 바꾸기','입력을 전부 뒤집기'],w:'NOT 두 번은 원래대로라 기능 유지.'},
  {s:'e8',q:'NAND(A, A) 는?',ch:["A'",'A','1','0'],w:'NAND 하나로 NOT을 만들 수 있어요.'},
-,
  {s:'f1',ex:1,q:'Enable 신호로 쓰는 게이트는?',ch:['AND','OR','XOR','NOT'],w:'Enable = 0이면 출력이 무조건 0.'},
  {s:'f1',q:'Enable = 0일 때 출력은?',ch:['언제나 0','입력 그대로','언제나 1','입력 반전'],w:'x = a · 0 = 0.'},
  {s:'f1',ex:1,q:'신호를 조건부로 반전(Invert)할 때 쓰는 게이트는?',ch:['XOR','AND','OR','NAND'],w:'Invert = 1이면 뒤집기, 0이면 그대로.'},
@@ -525,7 +524,7 @@ QS_1.push(
  {pr:1,s:'s4',q:'[서술] Turing Test와 CAPTCHA의 다른 점은?',ch:['판단하는 주체: 튜링 테스트는 사람, CAPTCHA는 컴퓨터','목적이 완전히 다르다','CAPTCHA는 기계 지능을 측정한다','다른 점이 없다'],w:'방향만 반대인 튜링 테스트 = Reverse Turing Test.'},
  {pr:1,s:'s3',q:'[서술] 폰 노이만 구조의 근본적인 한계와 이를 극복하려는 새로운 컴퓨터로 알맞은 것은?',ch:['CPU와 메모리 사이 순차적 데이터 이동의 병목 → 양자 컴퓨터 · 뉴로모픽 컴퓨터','진공관이 너무 많다 → 트랜지스터 컴퓨터','10진수를 쓴다 → 2진수 컴퓨터','메모리가 없다 → 프로그램 내장 컴퓨터'],w:'"폰 노이만 병목(bottleneck)". 답은 1가지만 쓰면 돼요.'},
  {pr:1,s:'s1',q:'[찾아보기] 사람의 신체를 측정 단위로 쓴 것이 아닌 것은?',ch:['미터(m)','인치','피트','뼘'],w:'인치 = 엄지 폭, 피트 = 발 길이, 뼘 = 손을 편 길이. 미터는 지구 둘레 기준.'},
- {pr:1,s:'s2',q:'[인물 순서] 시대 순서가 맞는 것은?',ch:['파스칼 → 배비지 → 튜링 → 폰 노이만 → 스티브 잡스','배비지 → 파스칼 → 폰 노이만 → 튜링 → 스티브 잡스','파스칼 → 폰 노이만 → 배비지 → 튜링 → 스티브 잡스','튜링 → 파스칼 → 배비지 → 스티브 잡스 → 폰 노이만'],w:'1642 파스칼 → 1822 배비지 → 1936 튜링 머신 → 1945 폰 노이만 → 1975 애플.'},
+ {pr:1,s:'s2',q:'[인물 순서] 시대 순서가 맞는 것은?',ch:['파스칼 → 배비지 → 튜링 → 폰 노이만 → 스티브 잡스','배비지 → 파스칼 → 폰 노이만 → 튜링 → 스티브 잡스','파스칼 → 폰 노이만 → 배비지 → 튜링 → 스티브 잡스','튜링 → 파스칼 → 배비지 → 스티브 잡스 → 폰 노이만'],w:'1642 파스칼 → 1822 배비지 → 1936 튜링 머신 → 1945 폰 노이만 → 1976 애플.'},
  {pr:1,s:'s2',q:'[인물 업적] 인물과 업적이 잘못 짝지어진 것은?',ch:['라이프니츠 – 최초의 상용 컴퓨터','파스칼 – 톱니바퀴 덧셈·뺄셈 계산기','폰 노이만 – 프로그램 내장 방식','튜링 – 튜링 머신 · 튜링 테스트'],w:'라이프니츠 = 4칙 연산기 + 2진법. 최초 상용은 UNIVAC-I.'},
  {pr:1,s:'s7',q:'[서술] "전원을 켜면 ROM의 부트 프로그램이 ( A )의 운영체제를 ( B )으로 불러오는 과정이 Booting이다."',ch:['A: 하드 디스크, B: RAM','A: RAM, B: 하드 디스크','A: ROM, B: RAM','A: 하드 디스크, B: ROM'],w:'ROM → 하드 디스크 → RAM = Booting!'},
  {pr:1,s:'s3',q:'[토론] ENIAC이 처음 개발된 목적은?',ch:['탄도 계산 (군사용)','인구 조사','대통령 선거 예측','암호 해독'],w:'긍정적이지 않은 요구(전쟁)로 기술이 발전한 예!'},
@@ -811,7 +810,7 @@ function block(b){
     case 'flow': return `<div class="blk">${T}<div class="flow">${b.steps.map((s,i)=>`${i?'<div class="arrow">↓</div>':''}<div class="fs"><div class="n">${i+1}</div><div><div class="ft">${md(s.t)}</div><div class="fd">${md(s.d)}</div></div></div>`).join('')}</div></div>`;
     case 'place': return `<div class="blk">${T}<div class="place">${b.cells.map(c=>`<div class="pc ${c[0]==='0'?'zero':''}"><b class="mono">${esc(c[0])}</b><small>${esc(c[1])}</small><i>${esc(c[2])}</i></div>`).join('')}</div><div class="pres">${md(b.result)}</div></div>`;
     case 'calc': { const dir = b.dir==='up' ? '<div class="dir">⬆ 아래→위로 읽기</div>' : b.dir==='down' ? '<div class="dir">⬇ 위→아래로 읽기</div>' : '';
-      return `<div class="blk">${T}<div class="calc" style="${dir?'':'grid-template-columns:1fr auto'}">${b.rows.map(r=>`<div class="ce mono">${esc(r[0])}</div><div class="co ${r[1]?'':'empty'}">${esc(r[1])}</div>`).join('')}${dir}</div><div class="pres">${md(b.result)}</div></div>`; }
+      return `<div class="blk">${T}<div class="calc" style="${dir?`grid-template-rows:repeat(${b.rows.length},auto)`:'grid-template-columns:1fr auto'}">${b.rows.map(r=>`<div class="ce mono">${esc(r[0])}</div><div class="co ${r[1]?'':'empty'}">${esc(r[1])}</div>`).join('')}${dir}</div><div class="pres">${md(b.result)}</div></div>`; }
     case 'group': return `<div class="blk">${T}<div class="grp">${b.groups.map(g=>`<div class="gc"><div class="gb mono">${esc(g[0])}</div><div class="ga">↓</div><div class="gv">${esc(g[1])}</div></div>`).join('')}</div><div class="pres">${md(b.result)}</div></div>`;
     case 'formula': return `<div class="blk">${T}<div class="formula">${b.items.map(f=>`<div class="fr"><span>${esc(f[0])}</span><b class="mono">${esc(f[1])}</b></div>`).join('')}</div></div>`;
     case 'demo': return `<button class="btn go wide demo" data-lab="${b.lab}" data-demo="${b.demo||''}">${esc(b.label)}</button>`;
@@ -1033,7 +1032,7 @@ function labBoot(){
   bindBack();
   shuffle(BOOT).forEach(s=>{ const b=document.createElement('button'); b.className='opt'; b.textContent=s.t; b.dataset.k=s.k; b.onclick=()=>press(b); $('bOpts').appendChild(b); });
   const press=b=>{
-    if(!t0){ t0=performance.now(); timer=setInterval(()=>{ $('bTime').textContent=`⏱ ${((performance.now()-t0)/1000).toFixed(1)}초`; },100); }
+    if(!t0){ t0=performance.now(); timer=setInterval(()=>{ if(!$('bTime')){ clearInterval(timer); return; } $('bTime').textContent=`⏱ ${((performance.now()-t0)/1000).toFixed(1)}초`; },100); }
     const want=BOOT[n]; const term=$('term');
     if(b.dataset.k===want.k){
       if(n===0) term.innerHTML='';
